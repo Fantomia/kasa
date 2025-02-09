@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1240px;
+  flex: auto;
+  height: 100%;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+.Header, main {
+  padding: 0 20px;
+  max-width: 1240px;
+}
+
+main {
+  width: 100%;
+}
+
+.banner {
+  position: relative;
+  border-radius: 12px;
+  max-width: 1240px;
+  width: 100%;
+  height: 300px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .banner {
+    height: 175px;
+  }
+}
+@media (max-width: 640px) {
+  .banner {
+    height: 120px;
+  }
+}
+.banner__title {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+@media (max-width: 640px) {
+  .banner__title {
+    font-size: 24px;
+    text-wrap: balance;
+    padding: 20px;
+  }
+}
+
+.background-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  z-index: -1;
+}
+.background-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 30px 0;
+  width: 100%;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  gap: 50px;
+}
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    padding: 0;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 20px;
+    gap: 20px;
+  }
+}
+.card__link {
+  width: 28%;
+}
+@media (max-width: 1024px) {
+  .card__link {
+    width: 40%;
+  }
+}
+@media (max-width: 768px) {
+  .card__link {
+    width: 100%;
+  }
+}
+.card__style {
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  z-index: 0;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 340px;
+}
+@media (max-width: 768px) {
+  .card__style {
+    height: 255px;
+  }
+}
+.card__image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 0%, rgba(4, 4, 4, 0.2) 20.5%, rgba(0, 0, 0, 0.5) 50%);
+  opacity: 0.4;
+  z-index: 1;
+}
+.card__image--title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1;
+  color: white;
+  font-weight: 500;
+  width: 80%;
+  text-wrap: balance;
+}
+
+@media (max-width: 640px) {
+  .home__logo {
+    width: 145px;
+  }
+}
+@media (max-width: 380px) {
+  .home__logo {
+    width: 120px;
+  }
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 30px 0;
+}
+.Header nav {
+  display: flex;
+  gap: 50px;
+}
+@media (max-width: 640px) {
+  .Header nav {
+    gap: 10px;
+  }
+}
+@media (max-width: 380px) {
+  .Header nav {
+    gap: 0;
+  }
+}
+.Header nav a {
+  padding: 10px;
+  font-weight: 500;
+  font-size: 24px;
+}
+.Header nav a:hover, .Header nav a.active {
+  text-decoration: underline;
+}
+@media (max-width: 640px) {
+  .Header nav a {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+}
+@media (max-width: 640px) {
+  .Header {
+    margin: 25px 0;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: #FFFFFF;
+  font-size: 24px;
+  padding: 60px;
+  margin-top: auto;
+  gap: 15px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .footer {
+    font-size: 12px;
+  }
+  .footer p {
+    width: 40%;
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */

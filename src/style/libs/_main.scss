@@ -1,0 +1,45 @@
+@use '../libs/mixin' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+  
+html, body {
+    height: 100%;
+    margin: 0;
+}
+  
+a {
+    text-decoration: none;
+    color: black;
+}
+  
+li {
+list-style: none;
+}
+
+.App {
+    min-height: 100vh;
+    @include flex-columnCenter;
+}
+
+main {
+    @include flex-columnCenter;
+    max-width: 1240px;
+    flex: auto;
+    height: 100%;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.Header, main {
+    padding: 0 20px;
+    max-width: 1240px;
+}
+  
+main {
+    width: 100%;
+}
