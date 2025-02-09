@@ -46,6 +46,50 @@ main {
   width: 100%;
 }
 
+.error__title {
+  font-size: 288px;
+  font-weight: 700;
+  color: #FF6060;
+}
+@media (max-width: 1024px) {
+  .error__title {
+    font-size: 144px;
+  }
+}
+@media (max-width: 768px) {
+  .error__title {
+    font-size: 96px;
+  }
+}
+.error p {
+  color: #FF6060;
+  font-size: 34px;
+  text-wrap: balance;
+  white-space: normal;
+  line-height: 1.5;
+}
+@media (max-width: 1024px) {
+  .error p {
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .error p {
+    font-size: 18px;
+    max-width: 80%;
+    text-align: center;
+  }
+}
+.error a {
+  text-decoration: underline;
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .error a {
+    font-size: 14px;
+  }
+}
+
 .banner {
   position: relative;
   border-radius: 12px;
@@ -249,4 +293,93 @@ main {
     width: 40%;
     text-align: center;
   }
+}
+
+.collapse__title {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FF6060;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.collapse__title h2 {
+  color: white;
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  .collapse__title h2 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 380px) {
+  .collapse__title h2 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 380px) {
+  .collapse__title {
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+}
+.collapse__toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+.collapse__toggle svg {
+  width: 32px;
+  display: flex;
+}
+@media (max-width: 380px) {
+  .collapse__toggle svg {
+    width: 24px;
+  }
+}
+.collapse__content {
+  overflow: hidden;
+  visibility: hidden;
+  transition: height 0.3s ease-in-out, padding 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  font-size: 18px;
+  color: black;
+  background-color: #F6F6F6;
+  padding: 0 20px;
+  border-radius: 0 0 10px 10px;
+  height: 0;
+}
+.collapse__content--expanded {
+  visibility: visible;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .collapse__content {
+    font-size: 15px;
+  }
+}
+
+.rotate {
+  transform: rotate(-180deg);
+}
+
+.section__container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 30px;
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .section__container {
+    width: 100%;
+  }
+}
+
+.container__text {
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */

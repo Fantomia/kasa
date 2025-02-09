@@ -1,0 +1,71 @@
+@use './../../style/libs/variable' as *;
+
+.collapse {
+    &__title {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #FF6060;
+      color: white;
+      padding: 10px 20px;
+      border-radius: $border-10;
+      cursor: pointer;
+      & h2 {
+        color: white;
+        font-size: 20px;
+  
+        @media (max-width: $screen-md) {
+          font-size: 18px;
+        }
+        @media (max-width: $screen-s) {
+          font-size: 14px;
+        }
+      }
+      @media (max-width: $screen-s) {
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+    }
+  
+    &__toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: white;
+      transition: transform 0.3s ease-in-out;
+      & svg {
+        width: 32px;
+        display: flex;
+        @media (max-width: $screen-s) {
+          width: 24px;
+        }
+      }
+    }
+  
+    &__content {
+      overflow: hidden;
+      visibility: hidden;
+      transition: height 0.3s ease-in-out, padding 0.3s ease-in-out, visibility 0.3s ease-in-out;
+      font-size: 18px;
+      color: black;
+      background-color: #F6F6F6;
+      padding: 0 20px;
+      border-radius: 0 0 10px 10px;
+      height: 0;
+  
+      &--expanded {
+        visibility: visible;
+        padding: 20px;
+      }
+  
+      @media (max-width: $screen-md) {
+        font-size: 15px;
+      }
+    }
+}
+  
+.rotate {
+    transform: rotate(-180deg);
+}
+  

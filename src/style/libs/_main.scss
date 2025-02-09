@@ -1,4 +1,5 @@
 @use '../libs/mixin' as *;
+@use '../libs/variable' as *;
 
 * {
     margin: 0;
@@ -42,4 +43,45 @@ main {
   
 main {
     width: 100%;
+}
+
+.error {
+    @include flex-columnCenter;
+    height: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+    flex: auto;
+    &__title {
+        font-size: 288px;
+        font-weight: 700;
+        color: $primary-color;
+        @media (max-width: $screen-lg) {
+            font-size: 144px;
+        }
+        @media (max-width: $screen-md) {
+            font-size: 96px;
+        }
+    }
+    & p {
+        color: $primary-color;
+        font-size: 34px;
+        text-wrap: balance;
+        white-space: normal;
+        line-height: 1.5;
+        @media (max-width: $screen-lg) {
+            font-size: 24px;
+        }
+        @media (max-width: $screen-md) {
+            font-size: 18px;
+            max-width: 80%;
+            text-align: center;
+        }
+    }
+    & a {
+        text-decoration: underline;
+        font-size: 18px;
+        @media (max-width: $screen-md) {
+            font-size: 14px;
+        }
+    }
 }
