@@ -1,0 +1,48 @@
+@use './../../style/libs/variable' as *;
+
+.carousel {
+    position: relative;
+    &__image {
+        display: flex;
+        justify-content: center;
+        & img {
+            overflow: hidden;
+            object-fit: cover;
+            height: 450px;
+            border-radius: 25px;
+            @media (max-width: $screen-md) {
+                height: 255px;
+            }
+        }
+    }
+    &__controls {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        &--btn {
+            border: none;
+            background: none;
+            cursor: pointer;
+            opacity: 0.9;
+            & svg {
+                width: 130px;
+                @media (max-width: $screen-md) {
+                    width: 30px;
+                }
+            }
+        }
+    }
+    &__counter {
+        position: absolute;
+        bottom: 20px;
+        right: 50%;
+        font-weight: 500;
+        font-size: 16px;
+        @media (max-width: $screen-sm) {
+            display: none;
+        }
+    }
+}

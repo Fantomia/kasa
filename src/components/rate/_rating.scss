@@ -1,0 +1,39 @@
+@use './../../style/libs/variable' as *;
+
+.rating__stars {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+    .star {
+      display: inline-block;
+      & svg {
+        width: 32px;
+        height: 32px;
+        @media (max-width: $screen-sm) {
+            width: 24px;
+            height: 24px;
+        }
+        @media (max-width: $screen-s) {
+            width: 18px;
+            height: 18px;
+        }
+      }
+      
+      &.filled svg {
+        color: #FF6060;
+      }
+  
+      &.empty svg {
+        color: #E3E3E3;
+      }
+    }
+  
+    @media (max-width: $screen-sm) {
+        gap: 6px;
+    }
+    @media (max-width: $screen-s) {
+        gap: 4px;
+    }
+  }
+  

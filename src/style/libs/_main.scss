@@ -17,7 +17,7 @@ a {
     text-decoration: none;
     color: black;
 }
-  
+
 li {
 list-style: none;
 }
@@ -41,8 +41,16 @@ main {
     max-width: 1240px;
 }
   
-main {
+main, .carousel, .carousel__image img, .summary{
     width: 100%;
+}
+
+.carousel__controls--btn, .carousel__counter {
+    color: $tertiary-color;
+}
+
+.host__info p, .summary__location h1 {
+    color: $primary-color;
 }
 
 .error {
@@ -85,3 +93,4 @@ main {
         }
     }
 }
+

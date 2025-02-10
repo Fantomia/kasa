@@ -1,9 +1,3 @@
-@mixin flex-rowCenter() {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 @mixin flex-columnCenter () {
     display: flex;
     flex-direction: column;
